@@ -9,8 +9,41 @@
   </head>
 
   <body>
-    <img class="small-image" src="/jslogo.png" alt="JavaScript Logo" />
-    <label for="myInput">Type something:</label>
-    <input name="myInput" type="text" id="myInput" />
+    <form id="itemform">
+      <h1>Meine Einkaufliste</h1>
+
+      <label for="itemname">Bezeichnung:</label>
+      <input type="text" id="itemname" name = "itemname"/>
+
+      <label for="itemamount">Menge:</label>
+      <input 
+      type="number" 
+      min ="1"
+      value="1"
+      id="itemamount" 
+      name = "itemamount"
+      />
+
+      <label for="itemprice">Preis:</label>
+      <input 
+      type="number" 
+      step="0.01" 
+      min ="0.01" 
+      value="1" 
+      id="itemprice" 
+      name = "itemprice"
+      />
+
+      <input id="itemform-submit" type="submit" value="Item hinzufügen">
+
+    </form>
+
+    <div id="itemcontainer">
+      <div class="shoppingitem">
+        <p>3 Orangen für 2,99€ : 8,97€</p>
+      </div>
+    </div>
+    <hr />
+    <p>Gesamtpreis: <span id="overallprice"></span></p>
   </body>
 </html>
